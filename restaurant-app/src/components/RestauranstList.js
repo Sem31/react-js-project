@@ -5,6 +5,8 @@ import {
     Link, 
   } from 'react-router-dom'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEdit,faTrash } from '@fortawesome/free-solid-svg-icons'
 class RestauranstList extends Component {
     constructor(){
         super();
@@ -13,9 +15,28 @@ class RestauranstList extends Component {
         }
     }
     componentDidMount(){
+        this.getData()
+    }
+    getData(){
         fetch("http://localhost:3000/restaurant").then((response) => {
             response.json().then((result) => {
                 this.setState({list:result})
+            })
+        })
+    }
+    delete(id){
+        console.log(this.state)
+        fetch("http://localhost:3000/restaurant/"+id,{
+            method:'delete',
+            headers:{
+                Accept: 'application/json',
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(this.state)
+        }).then((result)=>{
+            result.json().then((resp)=>{
+                console.log(resp)
+                this.getData()
             })
         })
     }
@@ -50,7 +71,8 @@ class RestauranstList extends Component {
                         <td>{data.name}</td>
                         <td>{data.rating}</td>
                         <td>{data.address}</td>
-                        <td><Link to={'/update/' + data.id}>update</Link></td>
+                        <td><Link to={'/update/' + data.id}><FontAwesomeIcon icon={faEdit} /></Link>
+                        <span onClick={()=>{this.delete(data.id)}}><FontAwesomeIcon icon={faTrash} /></span></td>
                     </tr>)
                 }
             </tbody>
