@@ -1,0 +1,40 @@
+{
+  "restaurant": [
+    {
+      "id": 1,
+      "name": "sem resto",
+      "address": "noida",
+      "rating": "4.5"
+    },
+    {
+      "id": 2,
+      "name": "sem resto1",
+      "address": "indore",
+      "rating": "5.0"
+    },
+    {
+      "id": 3,
+      "name": "sem resto2",
+      "address": "bhopal",
+      "rating": "3.5"
+    },
+    {
+      "id": 4,
+      "name": "sem resto3",
+      "address": "Rajsthan",
+      "rating": "2.5"
+    },
+    {
+      "name": "punjabi daba",
+      "address": "sadf",
+      "rating": "5",
+      "id": 5
+    },
+    {
+      "name": "kamleh",
+      "address": "asdf",
+      "rating": "3.5",
+      "id": 6
+    }
+  ]
+}

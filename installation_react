@@ -1,0 +1,37 @@
+INSTALL nodejs
+
+then create project with command 
+
+	npx create-react-app restaurant-app
+
+create db folder for fake api
+	and create one file there name is db.json
+	and then install json-server
+		sudo npm install -g json-server
+	then run command
+		json-server --watch db.json
+
+start app
+	npm start
+
+	ERROR
+		if error comes when we start app follow this :
+			sudo npm cache clean -f
+			sudo npm install -g n
+			sudo n stable
+
+			FIX PATH
+				sudo apt-get install --reinstall nodejs-legacy
+			UNDO
+				sudo n rm 6.0.0
+				sudo npm uninstall -g
+
+routing package name
+	react DOM
+		npm isntall react-router-dom
+
+bootstrap package install 
+	npm i bootstrap react-bootstrap
+
+import this line in app.js
+	import'bootstrap/dist/css/bootstrap.min.css';
