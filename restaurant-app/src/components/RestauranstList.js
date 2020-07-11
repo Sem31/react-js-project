@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap'
 
-import {
-    Link, 
-  } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit,faTrash } from '@fortawesome/free-solid-svg-icons'
+import NavbarMenu from './NavbarMenu'
 class RestauranstList extends Component {
     constructor(){
         super();
@@ -45,6 +44,7 @@ class RestauranstList extends Component {
         console.log(this.state.list)
         return (
             <div>
+            <NavbarMenu/>
                 <h1>RestauranstList</h1>
                 {/* if and else case */}
 

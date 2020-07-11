@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NavbarMenu from './NavbarMenu'
 
 class RestauranstUpdate extends Component {
     constructor(){
@@ -43,6 +44,7 @@ class RestauranstUpdate extends Component {
     render() {
         return (
             <div>
+            <NavbarMenu/>
                 <h1>RestauranstUpdate</h1>
                 <div>
                     <input onChange={(event)=>{this.setState({name: event.target.value})}}

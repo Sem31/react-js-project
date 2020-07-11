@@ -35,3 +35,21 @@ bootstrap package install
 
 import this line in app.js
 	import'bootstrap/dist/css/bootstrap.min.css';
+
+for font icon install
+	npm i --save @fortawesome/fontawesome-svg-core \
+             @fortawesome/free-solid-svg-icons \
+             @fortawesome/react-fontawesome
+
+	https://fontawesome.com/icons?d=gallery
+	and then import
+		import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+		import { faEdit,faTrash } from '@fortawesome/free-solid-svg-icons'
+
+
+** // Error ENOSPC System limit for number of file watchers reached
+	solution:
+		cat /proc/sys/fs/inotify/max_user_watches
+		echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
+		sudo sysctl -p
+		cat /proc/sys/fs/inotify/max_user_watches

@@ -1,4 +1,10 @@
 {
+  "login":[
+    {
+      "name":"sem",
+      "pass":"sem123"
+    }
+  ],
   "restaurant": [
     {
       "id": 1,
@@ -19,22 +25,10 @@
       "rating": "3.5"
     },
     {
-      "id": 4,
-      "name": "sem resto3",
-      "address": "Rajsthan",
-      "rating": "2.5"
-    },
-    {
       "name": "punjabi daba",
       "address": "sadf",
       "rating": "5",
       "id": 5
-    },
-    {
-      "name": "kamleh",
-      "address": "asdf",
-      "rating": "3.5",
-      "id": 6
     }
   ]
 }
